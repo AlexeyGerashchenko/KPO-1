@@ -33,3 +33,8 @@ func (d *TimeMeasurementDecorator) Execute() error {
 
 	return err
 }
+
+// GetName возвращает имя команды
+func (d *TimeMeasurementDecorator) GetName() string {
+	return "Измерение времени: " + d.wrappedCommand.GetName()
+}
